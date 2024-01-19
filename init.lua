@@ -1,5 +1,5 @@
-require("custom.remaps")
-require("custom.set")
+require("custom.remaps.init")
+require("custom.set.init")
 --[[
 
 =====================================================================
@@ -189,15 +189,6 @@ require('lazy').setup({
         map({ 'o', 'x' }, 'ih', ':<C-U>Gitsigns select_hunk<CR>', { desc = 'select git hunk' })
       end,
     },
-  },
-
-  {
-    -- Theme inspired by Atom
-    'navarasu/onedark.nvim',
-    priority = 1000,
-    config = function()
-      vim.cmd.colorscheme 'onedark'
-    end,
   },
 
   {
