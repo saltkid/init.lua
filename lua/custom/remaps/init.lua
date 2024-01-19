@@ -18,3 +18,6 @@ vim.keymap.set("n", "Q", "<nop>")
 
 -- git stuff
 vim.keymap.set("n", "<leader>gs", vim.cmd.Git, { desc = "[G]it [S]tatus" })
+
+-- select all
+vim.keymap.set("n", "<C-a>", "ggVG")
