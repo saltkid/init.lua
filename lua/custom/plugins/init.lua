@@ -38,12 +38,42 @@ return {
 			--- function will be called with a Highlights and ColorScheme table
 			---@param highlights Highlights
 			---@param colors ColorScheme
-			on_highlights = function(highlights, colors) end,
+			on_highlights = function(highlights, colors)
+				highlights.LineNr = {
+					fg = colors.dark5
+				}
+				highlights.LineNrAbove = {
+					fg = colors.dark3
+				}
+				highlights.LineNrBelow = {
+					fg = colors.dark3
+				}
+				highlights.NonText = {
+					fg = colors.dark3
+				}
+			end,
 		},
 	},
 	{
 		'Exafunction/codeium.vim',
 		event = 'BufEnter'
+	},
+	{
+		"kylechui/nvim-surround",
+		version = "*", -- Use for stability; omit to use `main` branch for the latest features
+		event = "VeryLazy",
+		config = function()
+			require("nvim-surround").setup({
+				-- Configuration here, or leave empty to use defaults
+			})
+		end
+	},
+	{
+		'iamcco/markdown-preview.nvim',
+		build = 'cd app && npm install',
+		config = function()
+			vim.g.mkdp_auto_close = 1
+		end
 	},
 	{
 		"LazyVim/LazyVim",

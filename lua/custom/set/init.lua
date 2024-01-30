@@ -10,3 +10,6 @@ vim.opt.wrap = false
 vim.opt.incsearch = true
 
 vim.opt.scrolloff = 10
+
+vim.opt.list = true
+vim.opt.listchars = "tab:▸ ,eol:¬,trail:·,space:·"
