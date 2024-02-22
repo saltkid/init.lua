@@ -656,4 +656,4 @@ cmp.setup {
 -- vim: ts=2 sts=2 sw=2 et
 
 -- set colorscheme
-vim.cmd.colorscheme 'tokyonight'
+vim.cmd.colorscheme 'kanagawa'
