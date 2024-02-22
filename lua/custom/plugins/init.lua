@@ -75,10 +75,4 @@ return {
 			vim.g.mkdp_auto_close = 1
 		end
 	},
-	{
-		"LazyVim/LazyVim",
-		opts = {
-			colorscheme = "tokyonight",
-		},
-	}
 }
