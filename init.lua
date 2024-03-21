@@ -657,3 +657,8 @@ cmp.setup {
 
 -- set colorscheme
 vim.cmd.colorscheme 'kanagawa'
+-- own lsps
+require("lspconfig")["dartls"].setup {
+  capabilities = capabilities,
+  on_attach = on_attach,
+}
