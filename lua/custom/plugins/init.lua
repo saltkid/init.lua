@@ -132,4 +132,12 @@ return {
 			"nvim-lua/plenary.nvim",
 		},
 	},
+	{
+		'akinsho/flutter-tools.nvim',
+		lazy = false,
+		dependencies = {
+			'nvim-lua/plenary.nvim',
+		},
+		config = true,
+	},
 }
