@@ -140,4 +140,7 @@ return {
 		},
 		config = true,
 	},
+	{
+		"nvim-treesitter/nvim-treesitter-context",
+	},
 }
