@@ -1,4 +1,6 @@
 vim.g.mapleader = " "
+
+-- open netrw
 vim.keymap.set("n", "<leader>oe", vim.cmd.Ex,
     { desc = "[O]pen [E]xplorer" })
 
@@ -6,14 +8,15 @@ vim.keymap.set("n", "<leader>oe", vim.cmd.Ex,
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
--- find and replace all (in file)
+-- find and replace all (in file) (thx prime)
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
     { desc = "[S]earch and Replace" })
 
 -- they're the same thing lul
 vim.keymap.set("i", "<C-c>", "<Esc>")
 
--- never press this I guess
+-- never press this I guess.
+-- After some reading, this is apparently 'ex' mode. not touching this lol
 vim.keymap.set("n", "Q", "<nop>")
 
 -- git stuff
@@ -56,3 +59,11 @@ vim.keymap.set("n", "<leader>`", "<cmd>e #<cr>", { desc = "Switch to recent buff
 
 -- lazygit
 vim.keymap.set("n", "<leader>gg", "<cmd>LazyGit<cr>", { desc = "Open lazygit" })
+
+-- todo-comment
+vim.keymap.set("n", "]t", function()
+    require("todo-comments").jump_next()
+end, { desc = "Next todo comment" })
+vim.keymap.set("n", "[t", function()
+    require("todo-comments").jump_prev()
+end, { desc = "Previous todo comment" })
