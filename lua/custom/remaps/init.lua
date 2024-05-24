@@ -1,7 +1,7 @@
 vim.g.mapleader = " "
 
 -- open netrw
-vim.keymap.set("n", "<leader>oe", vim.cmd.Ex,
+vim.keymap.set("n", "<leader>oe", "<cmd>Oil<cr>",
     { desc = "[O]pen [E]xplorer" })
 
 -- keep cursor in middle when doing half page jumps
